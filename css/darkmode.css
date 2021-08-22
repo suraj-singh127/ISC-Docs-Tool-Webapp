@@ -1,0 +1,766 @@
+
+/* Many of the colors in here are just for experimentation purposes */
+*,*::before,*::after{
+    font-size: 62.5%;
+    font-family: 'Poppins', 'sans serif';
+    --text-primary: rgb(170, 165, 165);
+    --text-secondary: white;
+    --bg-primary: rgb(69, 65, 156);
+    --bg-secondary: rgb(47,46,65);
+    --moderateViolet:rgb(108,99,255);
+    --darkGrayishBlue:rgb(47,46,65);
+    --darkBlakishBlue:rgb(63,61,86);
+    --white:hsl(0, 0%, 100%);
+    --lightGray:hsl(0, 0%, 81%);
+    --lightGrayishBlue:hsl(210, 46%, 95%);
+    --transition-speed: 600ms;
+    overflow-x: hidden;
+}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-secondary);
+    color: hsl(0deg 0% 81%);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////For the scrollbar/////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////// */
+
+body::-webkit-scrollbar{
+    width: 0.5rem  ;
+}
+body::-webkit-scrollbar-track{
+    background: rgba(41, 39, 39, 0.8);
+}
+body::-webkit-scrollbar-thumb{
+   background: var(--bg-primary);
+   border-radius: 100px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// Hamburger Icon ///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////*/
+.hamburgerIcon{
+    display: block;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.267);
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 21px;
+    height: 2px;
+    background-color: rgb(204, 204, 204);
+    margin: 4px 0px;
+    transition: all 0.4s ease 0s;
+  }
+  
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+    transform: rotate(-45deg) translate(-5px, 4px);
+    transition: 0.2s ease-in-out;
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -5px);
+    transform: rotate(45deg) translate(-4px, -4px);
+    transition: 0.2s ease-in-out;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// The header ///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////*/
+.header{
+    top: 0;
+    /* padding: 1.6rem; */
+    width: 100%;
+    left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1.28rem; */
+    padding: 0rem;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.header::before{
+    content: "";
+    background-color: var(--bg-primary);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* opacity: 0.75; */
+}
+
+.logo img{
+    max-width: 20rem;
+    filter: invert(100%) brightness(100%);
+    padding: 0rem 2rem;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a:hover{
+    text-shadow: 0 0 5px white;
+}
+
+.search-bar{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 1.6rem 0 6.4rem;
+}
+.search-input{
+    width: 50%;
+    font-size: 1.2rem;
+    padding: .64rem;
+    border:1px solid #777;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.search-btn{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border:1px solid #777;    
+    background-color: #f8f8f8;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #f0f0f0;
+}
+
+.menu-icons{
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    gap: 2.4rem;
+}
+
+#userProfileName{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.user-profile-icon{
+    border-radius: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: #aaa;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// Top navigation section containing the different channel names/////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.combinations{
+    margin-top: 8rem;
+    padding: 1.2rem 2.4rem;
+    border-bottom: 3px solid #999;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.combination-section{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.combination{
+    margin: 0.3rem 0.5rem;
+    word-wrap: none;
+    white-space:nowrap;
+    border: 1px solid #555;
+    border-radius:1000px;
+    padding: .8rem 1.6rem;
+    font-size: inherit;
+    cursor:pointer;
+    transition: background-color 150ms;
+    background-color: #555;
+    color: #ccc;
+}
+
+.combination:hover{
+    background-color: #ddd;
+    cursor: pointer;
+    color: #555;
+}
+
+.active{
+    background-color: #d8d8d8 ;
+    color: #555;
+}
+
+.combination:last-child{
+    margin-right: 0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Designing the nav icon //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.navbar{
+    top:8rem;
+    width: 9rem;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color:rgb(69, 65, 156);
+   
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    align-items: center;
+    height: 100%;
+    transition: all 200ms;
+}
+
+.link-text{
+    margin-left: 0;
+    display: none;
+    font-size: 1.4rem;
+}
+
+.expand{
+    width: 25rem;
+    z-index: 1;
+}
+
+.expandLinkText{
+    display: inline;
+    width: 20rem;
+}
+
+.nav-icon{
+   width: 100%;
+}
+
+.nav-icon:last-child{
+    margin: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    filter: grayscale(0%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////Targeting the svg to maintain a minimum width and height ///////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.nav-link svg{
+    width:2.4rem;
+    min-width: 2.4rem;
+    margin: 0 2.72rem;
+}
+
+#changeLink img{
+    width:2.4rem;
+    min-width: 2.4rem;
+    margin: 0 2.72rem;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////// Utility Classes /////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+h2{
+    font-size: 2.5rem;
+}
+
+#default{
+    display: none;
+    margin: 1rem 4rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Main section starts here /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////*/
+
+main{
+    margin-left: 8rem;
+    padding: 1.6rem;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.sendBack{
+   width: calc(100% - 25rem);
+   left: 25rem;
+   margin-left: 0;
+}
+
+.warningtrue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(90, 156, 81, 0.363);
+    padding: 1.5rem;
+    color: green;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    font-size: 3rem;
+}
+
+.warningfalse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(156, 81, 81, 0.363);
+    padding: 1.5rem;
+    color: rgb(128, 0, 0);
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    font-size: 3rem;
+}
+
+#closeMessage{
+    border: none;
+    background-color: transparent;
+}
+/*//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Forms Container //////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+#showButtons{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #cfcfcf;
+    cursor: pointer;
+}
+#showButtons img{
+    width: 2rem;
+    margin: 0rem 2rem;
+}
+
+
+#showButtons img{
+    width: 2rem;
+    margin: 0rem 2rem;
+}
+
+
+.buttonsContainer{
+   display: none;
+   text-align: center;
+}
+
+.showAddandDelete{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.showAddandDelete button{
+    margin: 1rem;
+}
+
+.sectionHeading{
+    display: flex;
+    justify-content: space-between;
+ }
+
+.formsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sectionFormContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family: 'Poppins','sans serif';
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 1;
+    width: 35%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    flex-wrap: wrap;
+}
+
+.materialFormContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family: 'Poppins','sans serif';
+    top:55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 1;
+    width: 35%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 4px 3px 10px rgb(128 128 128 / 51%);
+    background-color: rgb(85 82 119);
+    color:#d8d8d8;
+}
+
+.show-deleteBtn{
+    background: var(--moderateViolet);
+    padding: 0.8rem 1.4rem;
+    margin: 2rem 0rem;
+    font-weight: 500;
+    color:black;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,0.1);
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+    padding: 1rem 3rem;
+    width: 25rem;
+}
+.show-deleteBtn:hover{
+    cursor: pointer;
+}
+
+
+.show-btn{
+    background: var(--moderateViolet);
+    padding: 0.8rem 1.4rem;
+    margin: 2rem 0rem;
+    font-weight: 500;
+    color:black;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,0.1);
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+    padding: 1rem 3rem;
+    width: 25rem;
+}
+
+.show-btn:hover{
+    cursor: pointer;
+}
+
+
+.close-btn{
+    border:none;
+    background-color: transparent;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: rgba(255, 0, 0, 0.473);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0rem 1rem;
+    border-radius: 50%;
+}
+.close-btn:hover{
+    background-color: rgba(255, 117, 117, 0.473);
+    color: rgb(47,46,65);
+}
+
+.showForm{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.closeForm{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.formContainer{
+    padding: 0rem 1rem;
+}
+
+.formContainer p{
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  color: #d8d8d8;
+}
+
+#createMaterial{
+    background: var(--moderateViolet);
+    padding: 0.8rem 1.4rem;
+    margin: 2rem 2rem;
+    font-weight: 500;
+    color:black;
+    box-shadow: 0px 0px 10px rgba(0, 0,0,0.1);
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+    padding: 1rem 3rem;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.heading{
+    margin: 1rem;
+}
+
+#sectionForm{
+    width: 100%;
+}
+
+#materialForm{
+    width: 100%;
+}
+
+#materialName{
+    width: 90%;
+    padding: 0.6rem 0.6rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.6rem;
+    border-color: rgba(0, 0, 0, 0.589);
+}
+
+
+#subjectName{
+    width: 43%;
+    padding: 0.6rem 0.6rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.6rem;
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+#subjectCode{
+    width: 30%;
+    padding: 0.6rem 0.6rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.6rem;
+    border-color: rgba(0, 0, 0, 0.589);
+}
+
+#gDriveUrl{
+    width: 90%;
+    padding: 0.6rem 0.6rem;
+    margin: 0.5rem 0rem;
+    font-size: 1.6rem;
+    border-color: rgba(0, 0, 0, 0.589);
+}
+
+#type{
+    margin: 1rem 0rem;
+}
+#type span{
+    font-size: 2rem;
+}
+#semester{
+    margin: 1rem;
+    font-size: 2rem;
+    border-color: rgba(0, 0, 0, 0.589);
+}
+.formContainer label{
+   font-size: 2rem;
+}
+.typeOfMaterials{
+   display: flex;
+   flex-direction: column;
+   font-size: 4rem
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// Material Section//////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+.deleteMaterial{
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    background-color: rgba(255, 117, 117, 0.473);
+    cursor: pointer;
+    display: none;
+}
+
+.deleteMaterial:hover{
+    background-color: rgba(255, 117, 117, 0.836);
+}
+.showDeleteButton{
+    display: block;
+}
+
+.material h2{
+   border-bottom: 3px solid #777;
+   margin: 2rem;
+   padding: 1rem;
+}
+
+.materialDiv{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+   gap: 2rem;
+   margin: 3rem 2rem 3rem 2rem;
+}   
+
+.material-container{
+   display: flex;
+   flex-direction: column;
+   margin: 0rem 1rem 0 1rem 0;
+}
+
+.thumbnail{
+    position: relative;
+    display: flex;
+}
+
+.thumbnail-image{
+    width: 100%;
+    height: 100%;
+    min-width: 22rem;
+    min-height: 10rem;
+    background-color: #aaa;
+}
+
+.material-bottom-section{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 1.6rem;
+}
+
+.section-icon{
+    margin-right: 1.2rem;
+    border-radius: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: #aaa;
+}
+
+.material-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.material-title{
+     text-decoration: none;
+     font-size: 1.2rem;
+     font-weight: bold;
+     margin-bottom: 0.4rem;
+     color: hsl(0deg 0% 81%);
+}
+.material-combination-name{
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 0rem;
+    transition: color 150ms;
+}
+
+.material-combination-name:hover{
+    color: #f0f0f0 ;
+}
+
+.material-meta,.material-combination-name{
+    color: #aaa; 
+    font-size: 1.6rem;
+}
+ 
+.material{
+    margin-top: 4rem;
+}
+
+/* for small screens */
+@media  only screen and (max-width:1150px) {
+    #subjectName{
+        width: 90%;
+    }
+    #subjectCode{
+        width: 90%;
+    }
+    .materialFormContainer{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .menu-icons{
+        display: none;
+    }
+    .header{
+        flex-direction: row;
+        top: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    main{
+        margin-left: 7rem;
+        /* z-index:-1; */
+    }
+    .logo{
+        font-size: 2.5rem;
+    }
+    .logo img{
+        width: 12rem;
+    }
+    .search-bar{
+        width: 75%;
+    }
+    .search-bar input{
+        width: 100%;
+    }
+    .navbar{
+        margin-top: -1.5rem;
+    }
+    
+}
+
+@media only screen and (max-width:650px) {
+    .navbar{
+        transform: translateX(-10rem);
+    }
+    .sendBack{
+        width: 100%;
+        left: 0;
+    }
+    main{
+        margin-left: 0;
+    }
+    .expand{
+        transform: translateX(0rem);
+    }
+    .search-bar{
+        width: 40%;
+    }
+}

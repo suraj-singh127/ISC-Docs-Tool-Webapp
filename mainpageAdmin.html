@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC Docs | Tool to manage your online docs effectively</title>
+    <link rel="stylesheet" href="css/darkmode.css" id="pageStyle">
+
+    <!-- Including the font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+<body>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-icon">
+                    <a href="https://iscdocs.netlify.app/" class="nav-link" target="_blank">
+                        <svg aria-hidden="true" focusable="false" -prefix="fas" -icon="home"
+                            class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                            </path>
+                        </svg>
+                        <span class="link-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#" class="nav-link">
+                        <svg aria-hidden="true" focusable="false" -prefix="fas" -icon="columns"
+                            class="svg-inline--fa fa-columns fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64V160h160v256zm224 0H288V160h160v256z">
+                            </path>
+                        </svg>
+                        <span class="link-text">Sections</span>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#" class="nav-link">
+                        <svg aria-hidden="true" focusable="false" -prefix="far" -icon="list-alt"
+                            class="svg-inline--fa fa-list-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z">
+                            </path>
+                        </svg>
+                        <span class="link-text">To do's</span>
+                    </a>
+                </li>
+                <li class="nav-icon" id="changeTheme">
+                    <a href="#" class="nav-link" id="changeLink">
+                        <img src="img/icon-sun.svg" alt="">
+                        <span class="link-text">Change Theme</span>
+                    </a>
+                </li>
+                <li class="nav-icon">
+                    <a href="#" class="nav-link">
+                        <svg aria-hidden="true" focusable="false" -prefix="fas" -icon="at"
+                            class="svg-inline--fa fa-at fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z">
+                            </path>
+                        </svg>
+                        <span class="link-text">Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="hamburgerIcon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="img/isclogofinal.png" alt="">
+                </a>
+            </div>
+            <form class="search-bar">
+                <input id ="searchBar" class="search-input" type="search" placeholder="Search by title" aria-label="Search">
+                <button type="submit" class="search-btn" id="searchBtn">
+                    <img src="img/magnify.svg" alt="search" srcset="">
+                </button>
+            </form>
+        </header>
+        <main class="default">
+
+            <div class="combinations">
+                <section class="combination-section">
+                    <button class="combination active" onclick="showMaterial(this)">All</button>
+                    <button class="combination" id="maths" onclick="showMaterial(this)">Mathematics</button>
+                    <button class="combination" id="physics" onclick="showMaterial(this)">Physics</button>
+                    <button class="combination" id="statistics" onclick="showMaterial(this)">Statistics</button>
+                    <button class="combination" id="computerScience" onclick="showMaterial(this)">CS</button>
+                    <button class="combination" id="geology" onclick="showMaterial(this)">Geology</button>
+                    <button class="combination" id="geography" onclick="showMaterial(this)">Geography</button>
+                </section>
+            </div>
+            <div id="message">
+            </div>
+
+            <div class="formsContainer">
+                <div class="formContainer">
+                    <div class="materialFormContainer">
+                        <h3 class="heading">Add Materials -</h3>
+                        <input type="reset" class="close-btn" onclick="showMaterialForm()" value="&times">
+                        <form action="" id="materialForm">
+                            <div class="formContainer">
+                                <input name="materialName" type="text" id="materialName" placeholder="Material Name"
+                                    required>
+                                    <p>Your material name should of 5 characters or more.</p>
+                            </div>
+                            <div class="formContainer">
+                                    <label for="subjectName">Subject: </label>
+                                    <select name="subjectName" id="subjectName">
+                                        <option value="Others">Others</option>
+                                        <option value="Statistics">Statistics</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="CS">CS</option>
+                                        <option value="Geology">Geology</option>
+                                        <option value="Geography">Geography</option>
+                                    </select>
+                                <input name="addSubject" id="subjectCode" placeholder="subject code" required>
+                                <p>Subcode format should be of ABC101 or ab101</p>
+                            </div>
+                            <div class="formContainer">
+                                <label for="semester">Semester :</label>
+                                <input type="number" id="semester" name="semester" min="1" max="8">
+                            </div>
+                            <div class="formContainer">
+                                <input name="addUrl" id="gDriveUrl" placeholder="google drive link" required></textarea>
+                            </div>
+                            <div class="formContainer" id="type">
+                                <span>Type:</span>
+                                <div class="typeOfMaterials">
+                                    <div class="typeContainer">
+                                        <input type="radio" name="materialType" id="questionPaper"
+                                            value="questionPaper">
+                                        <label for="fiction">Question Paper</label>
+                                    </div>
+                                    <div class="typeContainer">
+                                        <input type="radio" name="materialType" id="notes" value="notes">
+                                        <label for="cs">Subject Notes</label>
+                                    </div>
+                                    <div class="typeContainer">
+                                        <input type="radio" name="materialType" id="books" value="books">
+                                        <label for="nonFiction">Books</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="createMaterial" type="submit">Add Material</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material">
+                <div class="sectionStart">
+                    <h2 class="sectionHeading">Sections goes here -<button id="showButtons">Click here to add and Delete Materials<img src="img/icon-arrow.svg" alt=""></button></h2>
+                    <div class="buttonsContainer">
+                        <button class="show-btn" onclick="showMaterialForm()">Add Material</button>
+                        <button class="show-deleteBtn">Delete Materials</button>
+                    </div>
+                </div>
+                <p id="default">Nothing to show here. Add some sections from - "Add a Section"</p>
+                <div id="addedSections">
+                    <div class="materialClass" id="s1">
+                        <h2>Question Paper</h2>
+                        <p>Nothing to show here.</p>
+                    </div>
+                    <div class="materialClass" id="s2">
+                        <h2>Notes</h2>
+                        <p>Nothing to show here.</p>  
+                    </div>
+                    <div class="materialClass" id="s3">
+                        <h2>Books</h2>
+                        <p>Nothing to show here.</p>
+                    </div>
+                    <div class="materialClass" id="s4">
+                        <h2>Others</h2>
+                        <p>Nothing to show here.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+</body>
+
+<script src="js/appAdminPage.js"></script>
+<script src="js/appNavbar.js"></script>
+<script src="js/appSearch.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/swapStyleSheet.js"></script>
+
+</html>
