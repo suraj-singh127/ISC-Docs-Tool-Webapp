@@ -1,6 +1,6 @@
 # ISC Docs - A web app
 
-ISC Docs Tool Web app is a tool to manage all your cloud content at one place in a manageable way so as to seamlessly filter through content without any distraction of disturbance.  
+ISC Docs Tool Web app is a tool to manage all your cloud content at one place in a manageable way so as to seamlessly filter through content without any distraction or disturbance. It can also be used to bookmark important articles and search for them real quick whenever you need them.
 
 ## Table of contents
 
@@ -28,6 +28,11 @@ Users should be able to:
 - Add Materials and Online Bookmarkable stuff using a simple form   
 - Filter through content subject wise
 - Also search for the material using simple search functionality
+
+### Web app has some cons and they are listed below - 
+- All the data is being stored in local storage so once you clear the local storage there is no going back.
+- Web App will appear different on different devices due to data being stored in local storage as well as different on different browsers.
+- Currently it is mainstreamed for academic purposes
 
 ### Screenshot
 
