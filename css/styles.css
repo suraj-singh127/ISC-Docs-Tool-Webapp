@@ -95,9 +95,6 @@ body::-webkit-scrollbar-thumb{
     z-index: -1;
 }
 
-.logo{
-    flex-grow: 1;
-}
 
 .logo img{
     width: 20rem;
@@ -116,7 +113,8 @@ header a:hover{
 
 .search-bar{
     display: flex;
-    width: 70%;
+    flex-grow: 1;
+    margin: 0 1.6rem 0 6.4rem;
 }
 
 .search-input{
@@ -590,7 +588,6 @@ main{
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
-   align-items: center;
 }
 
 .deleteMaterial{
@@ -706,47 +703,64 @@ main{
     .menu-icons{
         display: none;
     }
-
     .header{
         flex-direction: row;
         top: 0;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
-
-    .header .logo{
-        width: 40%;
-    }
-
     main{
         margin-left: 7rem;
-        padding: 0.6rem;
+        /* z-index:-1; */
     }
-
+    .logo{
+        font-size: 2.5rem;
+    }
+    .logo img{
+        width: 12rem;
+        padding: 0;
+    }
     .search-bar{
-        width: 40%;
+        width: 50%;
+        margin: 0rem 2rem;
     }
-
     .search-bar input{
         width: 100%;
     }
+    .navbar{
+        margin-top: -1.5rem;
+    }
+    .materialDiv{
+        gap: 1.2rem;
+        margin: 1.5rem;
+    }
+}
 
+@media only screen and (max-width:650px) {
     .navbar{
         transform: translateX(-10rem);
+        margin-top: 2rem;
     }
-
     .sendBack{
         width: 100%;
         left: 0;
     }
-
     main{
         margin-left: 0;
     }
-
     .expand{
         transform: translateX(0rem);
     }
-    
+    .combinations{
+        margin-top: 9.5rem;
+    }
+    .header{
+      flex-wrap: wrap;
+    }
+
+    .search-bar{
+        width: 50%;
+        margin: 1rem;
+    }
 }
 
