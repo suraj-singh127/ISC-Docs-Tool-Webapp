@@ -67,8 +67,7 @@ Users should be able to:
 I learned how to create toggle elements using Vanilla Javascript using some primitive logic.
 I don't feel very proud of CSS in this and  found that there is a major scope for learning and improvement especially
 about Mobile first Workflow and Responsive design.
-Still have ways to go around working with plain old JavaScript. But I did learn how to make a theme switcher with just css and javascript.
-I learned how to use localStorage in an effective way.
+Still have ways to go around working with plain old JavaScript. But I did learn how to make a theme switcher with just css, javascript and learned how to use localStorage in an effective way.
 
 ### Continued development
 
