@@ -40,7 +40,7 @@ Users should be able to:
 - Desktop Preview
 ![](./screenshotVisible.png)
 
-- Tablet Preview
+- Tablet Preview\
 ![](./screenShotTablets.png)
 
 - Light theme
