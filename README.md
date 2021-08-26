@@ -33,6 +33,7 @@ Users should be able to:
 - All the data is being stored in local storage so once you clear the local storage there is no going back.
 - Web App will appear different on different devices due to data being stored in local storage as well as different on different browsers.
 - Currently it is mainstreamed for academic purposes
+- Has some issues on Mobile devices(will be fixed soon)
 
 ### Screenshot
 
