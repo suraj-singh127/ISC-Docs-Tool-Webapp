@@ -41,7 +41,7 @@ Users should be able to:
 ![](./screenshotVisible.png)
 
 - Tablet Preview
-![](./screenshotTablets.png)
+![](./screenShotTablets.png)
 
 - Light theme
 ![](./lightTheme.png)
